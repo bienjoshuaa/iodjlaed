@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #1c1c1c, #2e2e2e);
+  }
+  
+  #home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    color: #fff;
+    position: relative;
+  }
+  
+  .home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .text-container {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100px; /* Fixed height */
+  }
+  
+  .home-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+  }
+  
+  .home-description {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #d1d1d1;
+    min-height: 50px; /* Ensures space for text */
+  }
+  
+  .blink {
+    display: inline-block;
+    width: 8px;
+    height: 20px;
+    background-color: #fff;
+    animation: blink-caret 0.75s step-end infinite;
+  }
+  
+  @keyframes blink-caret {
+    50% {
+      background-color: transparent;
+    }
+  }
+  
+  .profile-image {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border: 2px solid #fff;
+    opacity: 0; /* Start as invisible */
+    animation: fadeIn 1s ease-in-out forwards; /* Fade in effect */
+    position: absolute; /* Fix the image position */
+    top: 60%; /* Adjust based on your layout */
+    left: 50%; /* Center the image */
+    transform: translate(-50%, -50%); /* Centering adjustment */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0; /* Start from invisible */
+    }
+    to {
+      opacity: 1; /* Fade to fully visible */
+    }
+  }

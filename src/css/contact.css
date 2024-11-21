@@ -1,0 +1,86 @@
+/* Contact Section Styling */
+.contact-section {
+    background-color: #1F1F1F; /* Dark background for contrast */
+    padding: 30px 20px; /* Reduced padding for a more compact footer */
+    color: white;
+    text-align: center;
+    margin-bottom: 0; /* Ensure no extra space below the section */
+    opacity: 0; /* Initially hidden for the fade-in animation */
+    transform: translateY(30px); /* Start position for sliding effect */
+    transition: opacity 1s ease, transform 1s ease; /* Smooth transition for fade-in and slide-up */
+}
+
+/* Add class when section is in view */
+.contact-section.in-view {
+    opacity: 1;
+    transform: translateY(0); /* Slide up to original position */
+}
+
+/* Title Styling */
+.contact-title {
+    font-size: 2rem; /* Smaller font size for a more compact title */
+    font-weight: 700;
+    margin-bottom: 15px; /* Reduced margin for tighter spacing */
+    color: #FFB74D; /* Golden color */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+/* Description Styling */
+.contact-description {
+    font-size: 1rem; /* Reduced font size for compactness */
+    line-height: 1.5;
+    margin-bottom: 20px; /* Reduced bottom margin */
+    color: #B0B0B0;
+    max-width: 600px; /* Reduced max width */
+    margin: 0 auto;
+    font-weight: 300;
+}
+
+/* Contact Info Styling */
+.contact-info {
+    margin-bottom: 20px; /* Reduced margin at the bottom */
+}
+
+.contact-info a {
+    color: #FFB74D;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #FF9800; /* Lighter golden color on hover */
+}
+
+/* Contact Icons */
+.contact-icons {
+    margin-top: 15px; /* Reduced space above the icons */
+}
+
+.contact-icons i {
+    font-size: 1.5rem; /* Smaller icons for a more compact look */
+    margin: 0 10px; /* Reduced margin between icons */
+    color: #FFB74D;
+    transition: color 0.3s ease;
+}
+
+.contact-icons i:hover {
+    color: #FF9800; /* Lighter golden color on hover */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .contact-title {
+        font-size: 1.8rem; /* Smaller title for mobile */
+    }
+    .contact-description {
+        font-size: 0.9rem; /* Adjust font size for mobile */
+    }
+    .contact-info {
+        font-size: 0.9rem; /* Adjust contact info font size */
+    }
+    .contact-icons i {
+        font-size: 1.3rem; /* Smaller icons on mobile */
+    }
+}
